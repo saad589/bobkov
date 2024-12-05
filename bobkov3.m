@@ -2,7 +2,9 @@ function [chf] = bobkov3(g,x,p)
 % (c) 2023, Saad Islam AMEI
 % Dept. of Nuclear Engineering, University of Dhaka
 %
-% LUT based on:  
+% This function reuses portions of code shared by Prof. Jacopo 
+% Buongiorno in the MIT OCW materials, with modifications for this 
+% specific implementation. The LUT is based on the following paper: 
 % Bobkov, V. P., et al. "A modified table for calculating critical heat 
 % fluxes in assemblies of triangularly packed fuel rods." Thermal 
 % engineering 58 (2011): 317-324.
@@ -19,10 +21,10 @@ function [chf] = bobkov3(g,x,p)
 % Output: 
 % -------
 % chf: crtitical heat flux, CHF (kW/m2)
-
+%
 % Todo:
 % -----
-% interpolate and fill-in the missing (nan) values
+% interpolate and fill-in the missing (NaN) values
 
 xdata=[-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
 gdata=[25,50,100,200,300,500,750,1000,1500,2000,3000,4000,5000];
